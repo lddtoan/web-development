@@ -4,58 +4,22 @@
   <head>
     <!-- change language to VNese -->
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="">
-      <input type="text" id="text1" />
+    <input type="text" id="score-input" />
 
-      <input onclick="check()" type="button" value="Comment" id="button1" />
+    <input
+      onclick="check()"
+      type="button"
+      value="Comment"
+      id="comment-button"
+    />
 
-      <b><p style="color: red;" class="output" id="output1"></p></b>
-      <p style="color: green;" class="output" id="output2"></p>
-      <p style="color: yellow;" class="output" id="output3"></p>
-      <p style="color: red;" class="output" id="output4"></p>
-    </form>
-    <style>
-      body{background-color: pink}
-    </style>
-    <script>
-      var t = document.getElementById("text1");
-      var b = document.getElementById("button1");
-      var o = document.getElementById("output1");
-      function check() {
-        var op = document.getElementById("output1");
-        op.innerHTML = "";
-        op = document.getElementById("output2");
-        op.innerHTML = "";
-        op = document.getElementById("output3");
-        op.innerHTML = "";
-        op = document.getElementById("output4");
-        op.innerHTML = "";
-        
-        if (isNaN(t.value)){
-          var o = document.getElementById('output1');
-          o.innerHTML = "Không đúng định dạng";
-        }
-        else {
-          if (t.value >= 8 && t.value <= 10){
-            var o = document.getElementById('output2');
-            o.innerHTML = "Làm tốt lắm";
-          }  
-          else if (t.value < 8 && t.value >= 6){
-            var o = document.getElementById('output3');
-            o.innerHTML = "Tạm được";
-          }  
-          else if (t.value < 6 && t.value > 0){
-            var o = document.getElementById('output4');
-            o.innerHTML = "Tệ";
-          }  
-          else{
-            var o = document.getElementById('output1');
-            o.innerHTML = "Không đúng định dạng";
-          }  
-        }
-      }
-    </script>
+    <b><p class="output" id="invalid-input"></p></b>
+    <p class="output" id="good-comment"></p>
+    <p class="output" id="normal-comment"></p>
+    <p class="output" id="bad-comment"></p>
+    <script src="main.js"></script>
   </body>
 </html>
