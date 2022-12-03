@@ -1,0 +1,15 @@
+#invalid-input {
+  color: red;
+}
+#good-comment {
+  color: green;
+}
+#normal-comment {
+  color: yellow;
+}
+#bad-comment {
+  color: red;
+}
+body {
+  background-color: pink;
+}
